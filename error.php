@@ -5,7 +5,9 @@ session_start();
 if (isset($_SESSION['loginUserid'])) {
 
 $loginUserid = $_SESSION['loginUserid'];
-$userDept = $_SESSION['dept'];
+
+if ($_SESSION['dept'] == 'Sales') { $userDept = strtolower($_SESSION['dept']); }
+else { $userDept = strtoupper($_SESSION['dept']); }
 }
 ?>
 
