@@ -1,19 +1,27 @@
+
+
 <?php
 
-$dbServername = "localhost";
-$dbUsername = "root";
-$dbPassword = "";
-$dbName = "ip_erp";
+// $dbServername = "localhost";
+// $dbUsername = "root";
+// $dbPassword = "";
+// $dbName = "ip_erp";
 
-//$conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
 
-$conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
+// $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
 
-//Checks to see if the database can be connected
-if (!$conn) {
-     die("Connection failed: " . mysqli_connect_error());
-}
+// if (!$conn) {
+//      die("Connection failed: " . mysqli_connect_error());
+// }
 
-// else {echo ' All Okay Leh';}
-
+//Get Heroku ClearDB connection information
+$cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+$cleardb_server = $cleardb_url["host"];
+$cleardb_username = $cleardb_url["user"];
+$cleardb_password = $cleardb_url["pass"];
+$cleardb_db = substr($cleardb_url["path"],1);
+$active_group = 'default';
+$query_builder = TRUE;
+// Connect to DB
+$conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 ?>
