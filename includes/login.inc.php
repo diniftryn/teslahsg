@@ -9,8 +9,8 @@ if (isset($_POST['login-submit'])) {
     if (empty($username) || empty($password)) {
 
         // echo "Login unsuccessful, please try again.";
-        // echo "<br><a href='../login.php'>Go back</a> to login.";
-        header("Location: ../login.php?error=emptyfields");
+        // echo "<br><a href='../index.php'>Go back</a> to login.";
+        header("Location: ../index.php?error=emptyfields");
         exit();
 
     } else {
@@ -21,8 +21,8 @@ if (isset($_POST['login-submit'])) {
         if (!mysqli_stmt_prepare($stmt, $sql)) {
 
             // echo "Login unsuccessful, please try again.";
-            // echo "<br><a href='../login.php'>Go back</a> to login.";
-            header("Location: ../login.php?error=sqlerror");
+            // echo "<br><a href='../index.php'>Go back</a> to login.";
+            header("Location: ../index.php?error=sqlerror");
             exit();
 
         } else {
@@ -36,8 +36,8 @@ if (isset($_POST['login-submit'])) {
                     if ($password != $row['user_pwd']) {
 
                     // echo "Wrong password, please try again.";
-                    // echo "<br><a href='../login.php'>Go back</a> to login.";
-                    header("Location: ../login.php?error=wrongpwd");
+                    // echo "<br><a href='../index.php'>Go back</a> to login.";
+                    header("Location: ../index.php?error=wrongpwd");
                     exit();
 
                     } else if ($password == $row['user_pwd']){
@@ -65,28 +65,28 @@ if (isset($_POST['login-submit'])) {
                             echo "User's department is unknown. Please contact the HR department.";
                         }
                     
-                        // header("Location: ../login.php?login=success");
+                        // header("Location: ../index.php?login=success");
                 
                     } else {
                     
                         // echo "Wrong password, please try again.";
-                        // echo "<br><a href='../login.php'>Go back</a> to login.";
-                        header("Location: ../login.php?error=wrongpwd");
+                        // echo "<br><a href='../index.php'>Go back</a> to login.";
+                        header("Location: ../index.php?error=wrongpwd");
                         
                         exit();
                     }
 
             } else {
                 // echo "No such user registered, please try again.";
-                // echo "<br><a href='../login.php'>Go back</a> to login.";
-                header("Location: ../login.php?error=nouser");
+                // echo "<br><a href='../index.php'>Go back</a> to login.";
+                header("Location: ../index.php?error=nouser");
                 exit();
             };
         };
     };
 
 } else {
-    header("Location: ../login.php?error=connectionerror");
+    header("Location: ../index.php?error=connectionerror");
 }
 
 ?>
