@@ -34,7 +34,7 @@ if ($_GET['status'] == 'notloggedin')
         echo "<span class='d-flex justify-content-center pb-5'><img width='250' src='https://cdn-icons-png.flaticon.com/512/295/295128.png'></span>";
         echo "<h1 class='text-center'>Error 401</h1>";
         echo "<h5 class='text-center'>You are not logged in! - You will be redirected in a moment</h5>";
-        header('Refresh: 3; URL=login.php?status=notloggedin');
+        header('Refresh: 3; URL=index.php?status=notloggedin');
 
     }
     else if ($_GET['status'] == 'accessdenied') {
