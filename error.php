@@ -5,7 +5,7 @@ session_start();
 if (isset($_SESSION['loginUserid'])) {
 
 $loginUserid = $_SESSION['loginUserid'];
-$userDept = strtolower($_SESSION['dept']);
+$userDept = $_SESSION['dept'];
 }
 ?>
 
