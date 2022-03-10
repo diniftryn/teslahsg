@@ -6,6 +6,6 @@ if(isset($_SESSION['loginUserid'])){
     session_unset();
     session_destroy();
     
-    header("Location: login.php?status=logout");
+    header("Location: index.php?status=logout");
 }
 ?>
