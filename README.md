@@ -2,7 +2,7 @@
 This is the Industrial Project (IP) for SGUS Intake 3 Diploma.
 This project is contributed by Lucas Chow, Dini Fitriyani and Sherinna Sin San Sung.
 
-## View the webapp at this link: http://teslahsg.herokuapp.com/
+## View the webapp at this link: https://teslahsg.000webhostapp.com/
 Read on to know more about the project, or test the webapp by logging in at the link with the following credentials:
 - Log in as a user from the Sales Department (username: dini201, password: 201)
 - Log in as a user from the HR Department (username: sherinna204, password: 204)
